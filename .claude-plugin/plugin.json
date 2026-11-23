@@ -1,0 +1,38 @@
+{
+  "name": "opexmx",
+  "displayName": "OpexMX",
+  "version": "0.2.0",
+  "description": "Connect Claude to OpexMX, the maintenance system of record: asset history, work orders, downtime, alarms, PM and spare parts. Diagnose a breakdown from real repair history and build downtime cost reports.",
+  "author": {
+    "name": "Opex Technologies Pte Ltd",
+    "url": "https://mx.opexcg.com"
+  },
+  "homepage": "https://mx.opexcg.com",
+  "license": "Apache-2.0",
+  "privacyPolicyUrl": "https://mx.opexcg.com/privacy",
+  "icon": ".claude-plugin/icon.png",
+  "keywords": [
+    "maintenance",
+    "cmms",
+    "eam",
+    "manufacturing",
+    "reliability",
+    "downtime"
+  ],
+  "repository": "https://github.com/Opex-Technologies-Pte-Ltd/opexmx-claude-plugin",
+  "userConfig": {
+    "opexmx_mcp_url": {
+      "type": "string",
+      "title": "OpexMX MCP URL",
+      "description": "Your OpexMX site's MCP address: https://<your-site>.mx.opexcg.com/api/mcp (on-premise: https://<your-server>/api/mcp)",
+      "required": true
+    },
+    "opexmx_api_key": {
+      "type": "string",
+      "title": "OpexMX API key",
+      "description": "An API key from OpexMX → Integrations → API (starts with mx_). Claude acts with the permissions of the user who created it.",
+      "sensitive": true,
+      "required": true
+    }
+  }
+}

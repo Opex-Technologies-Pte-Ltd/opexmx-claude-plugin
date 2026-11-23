@@ -1,0 +1,18 @@
+{
+  "name": "opexmx",
+  "owner": {
+    "name": "Opex Technologies Pte Ltd",
+    "url": "https://mx.opexcg.com"
+  },
+  "metadata": {
+    "description": "OpexMX plugins for Claude: maintenance data and skills from the OpexMX system of record."
+  },
+  "plugins": [
+    {
+      "name": "opexmx",
+      "source": "./",
+      "description": "Connect Claude to OpexMX: diagnose breakdowns from asset history and report the cost of downtime.",
+      "category": "productivity"
+    }
+  ]
+}

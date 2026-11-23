@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "opexmx": {
+      "type": "http",
+      "url": "${user_config.opexmx_mcp_url}",
+      "headers": {
+        "Authorization": "Bearer ${user_config.opexmx_api_key}"
+      }
+    }
+  }
+}
