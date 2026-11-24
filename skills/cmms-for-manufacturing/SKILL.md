@@ -34,11 +34,11 @@ Run the `setup` skill in this plugin for the full per-area check.
 | Alarms and condition monitoring (in place of part of a historian export) | `get_alarm_incidents`, `vibration_alerts`, `predictive_anomalies`, `get_health_scores`, `get_rul` |
 | Bad actors | `bad_actors` (`sortBy`: `downtime`, `ticketCount`, `mtbf`, `cost`) |
 | Spare parts on hand | `search_parts` (`search`, not `query`), `get_part_stock` |
-| Downtime events, row by row | `api_call` `GET /asset-status-segments` with `params` `{"startDate", "endDate", "assetId"?}` (below) |
+| Downtime events, row by row | `downtime_segments` (`startDate`, `endDate`, `failureOnly: true`, and `assetId` or `siteId` if scoped) (below) |
 
 ## Downtime rows in the `downtime-record` shape
 
-`GET /asset-status-segments` returns, per asset, the status segments overlapping the window: `startTime`, `endTime` (null = still in that state), `durationSeconds`, `statusName`, `statusIsFailure`, `statusIsRunning`, `notes`. Keep the segments where `statusIsFailure` is truthy (it can be `1` or `true`). Segment starts before the window are clamped to the window start; say so when a stoppage straddles it.
+`downtime_segments` returns, per asset, the status segments overlapping the window: `id`, `startTime`, `endTime` (null = still in that state), `durationSeconds`, `statusName`, `statusIsFailure`, `statusIsRunning`, `notes`. With `failureOnly: true` only failure statuses come back; without it, keep the segments where `statusIsFailure` is truthy (it can be `1` or `true`). Segment starts before the window are clamped to the window start; say so when a stoppage straddles it.
 
 Map each kept segment to the contract's stoppage fields:
 

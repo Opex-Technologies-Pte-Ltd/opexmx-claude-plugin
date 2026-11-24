@@ -1,7 +1,7 @@
 {
   "name": "opexmx",
   "displayName": "OpexMX",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Connect Claude to OpexMX, the maintenance system of record: asset history, work orders, downtime, alarms, PM and spare parts. Diagnose a breakdown from real repair history and build downtime cost reports.",
   "author": {
     "name": "Opex Technologies Pte Ltd",

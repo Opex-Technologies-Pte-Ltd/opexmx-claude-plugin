@@ -15,7 +15,7 @@ A general assistant can rank the causes of a breakdown or report on downtime onl
 | `downtime-cost-report` | Downtime per asset, the worst assets, MTBF/MTTR, maintenance cost and PM status for a period, converted to money with the cost per hour you give it. |
 | `cmms-for-manufacturing` | Makes OpexMX the CMMS connector for Anthropic's Claude for Manufacturing plugin: maps its CMMS inputs (assets, work orders, history, PM plans) to OpexMX, supplies downtime rows in its `downtime-record` shape, and lets its breakdown work write back to OpexMX tickets after you approve. |
 
-Claude also gets every OpexMX MCP tool (about 70, covering assets, tickets, PM, parts, purchase orders, reliability analytics, safety and compliance), so it can answer other maintenance questions directly.
+Claude also gets every OpexMX MCP tool (about 85, each one either read-only or a write, covering assets, tickets, PM, parts, purchase orders, reliability analytics, safety and compliance), so it can answer other maintenance questions directly.
 
 ## With Claude for Manufacturing
 
